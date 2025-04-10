@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css'; // Import the CSS file
 import CreateAccount from './components/CreateAccount';
 import ViewAccount from './components/ViewAccount';
 import Deposit from './components/Deposit';
@@ -18,12 +19,14 @@ function App() {
           </ul>
         </nav>
 
-        <Routes>
-          <Route path="/" element={<CreateAccount />} />
-          <Route path="/view" element={<ViewAccount />} />
-          <Route path="/deposit" element={<Deposit />} />
-          <Route path="/withdraw" element={<Withdraw />} />
-        </Routes>
+        <div className="container">
+          <Routes>
+            <Route path="/" element={<CreateAccount />} />
+            <Route path="/view" element={<ViewAccount />} />
+            <Route path="/deposit" element={<Deposit />} />
+            <Route path="/withdraw" element={<Withdraw />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
